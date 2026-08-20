@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deerajreddy Pannala — Network Security Engineer</title>
+<meta name="description" content="Portfolio of Deerajreddy Pannala, a Network Security Engineer specializing in SOC operations, firewall administration, and network infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ STATUS BAR ============ -->
+<div class="statusbar">
+  <span class="statusbar__dot" aria-hidden="true"></span>
+  <span class="statusbar__text">SYSTEMS: ONLINE</span>
+  <span class="statusbar__sep">/</span>
+  <span class="statusbar__text statusbar__uptime" id="uptime">UPTIME 00:00:00</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a href="#top" class="nav__logo">DP<span class="nav__logo-dot">.</span></a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#about">[ABOUT]</a>
+    <a href="#skills">[SKILLS]</a>
+    <a href="#experience">[EXPERIENCE]</a>
+    <a href="#projects">[PROJECTS]</a>
+    <a href="#certs">[CERTS]</a>
+    <a href="#contact">[CONTACT]</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__grid">
+    <div class="hero__content">
+      <p class="eyebrow">// NETWORK SECURITY ENGINEER</p>
+      <h1 class="hero__title">Deerajreddy Pannala</h1>
+      <p class="hero__tagline">I secure networks, triage incidents, and keep the perimeter honest — from firewall rule to root cause.</p>
+      <div class="hero__badges">
+        <span class="hero__badge">SOC Operations</span>
+        <span class="hero__badge">Firewall Automation</span>
+        <span class="hero__badge">Incident Response</span>
+      </div>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View projects</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+      <div class="hero__meta">
+        <div class="hero__meta-item"><span class="hero__meta-label">Based in</span><span>Bengaluru, India</span></div>
+        <div class="hero__meta-item"><span class="hero__meta-label">Currently at</span><span>LivingShine IT Infrastructure Pvt. Ltd.</span></div>
+      </div>
+    </div>
+
+    <div class="hero__topology" aria-hidden="true">
+      <img src="deerajdp.png" alt="Portrait of Deerajreddy Pannala" class="hero__photo">
+      <svg viewBox="0 0 480 480" class="topology-svg">
+        <!-- connective lines -->
+        <g class="topo-lines" stroke="var(--border-bright)" stroke-width="1.2" fill="none">
+          <line x1="240" y1="240" x2="120" y2="110" class="line l1"/>
+          <line x1="240" y1="240" x2="360" y2="100" class="line l2"/>
+          <line x1="240" y1="240" x2="90"  y2="330" class="line l3"/>
+          <line x1="240" y1="240" x2="380" y2="340" class="line l4"/>
+          <line x1="240" y1="240" x2="240" y2="60"  class="line l5"/>
+          <line x1="240" y1="240" x2="240" y2="420" class="line l6"/>
+          <line x1="120" y1="110" x2="240" y2="60" class="line l7"/>
+          <line x1="360" y1="100" x2="240" y2="60" class="line l8"/>
+          <line x1="90"  y1="330" x2="240" y2="420" class="line l9"/>
+          <line x1="380" y1="340" x2="240" y2="420" class="line l10"/>
+        </g>
+        <g class="topo-nodes">
+          <circle cx="240" cy="240" r="9" class="node node--self"/>
+          <circle cx="120" cy="110" r="5" class="node"/>
+          <circle cx="360" cy="100" r="5" class="node"/>
+          <circle cx="90"  cy="330" r="5" class="node"/>
+          <circle cx="380" cy="340" r="5" class="node"/>
+          <circle cx="240" cy="60"  r="5" class="node"/>
+          <circle cx="240" cy="420" r="5" class="node"/>
+        </g>
+        <g class="topo-labels" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--text-muted)">
+          <text x="240" y="264" text-anchor="middle" class="label label--self" fill="var(--accent-teal)">SOC</text>
+          <text x="120" y="98"  text-anchor="middle">CHECK POINT</text>
+          <text x="360" y="88"  text-anchor="middle">PALO ALTO</text>
+          <text x="90"  y="352" text-anchor="middle">FORTINET</text>
+          <text x="380" y="362" text-anchor="middle">SIEM</text>
+          <text x="240" y="44"  text-anchor="middle">EDR</text>
+          <text x="240" y="442" text-anchor="middle">CCTV / NVR</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero__ticker" role="status" aria-live="off">
+    <div class="hero__ticker-inner" id="logTicker"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="section__head">
+    <span class="section__tag">01</span>
+    <h2 class="section__title">About</h2>
+  </div>
+  <div class="about__body">
+    <p>
+      I'm a Network Security Engineer working across enterprise network infrastructure, firewall
+      administration, and L2 SOC operations. My day-to-day spans incident triage, log analysis,
+      SIEM monitoring, and firewall rule review — backed by a working knowledge of software
+      development and automation that lets me script my way out of repetitive problems instead
+      of clicking through them.
+    </p>
+    <p>
+      I like environments where networking, security, and infrastructure meet: racking hardware
+      one hour, reviewing Check Point rulebases the next, and writing a Python script to catch
+      the thing a human would miss on the third pass.
+    </p>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section--panel" id="skills">
+  <div class="section__head">
+    <span class="section__tag">02</span>
+    <h2 class="section__title">Skills</h2>
+  </div>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <div class="skill-card__head"><span class="skill-card__code">SEC</span><h3>Cybersecurity</h3></div>
+      <div class="tag-list">
+        <span class="tag">Network Security</span><span class="tag">SOC Operations</span><span class="tag">Security Monitoring</span>
+        <span class="tag">Incident Triage &amp; Response</span><span class="tag">Log Analysis</span><span class="tag">Threat Detection</span>
+        <span class="tag">Vulnerability Assessment</span><span class="tag">Firewall Administration</span><span class="tag">Firewall Rule Management</span>
+        <span class="tag">Security Auditing</span><span class="tag">Basic VAPT</span><span class="tag">Network Traffic Analysis</span>
+        <span class="tag">SIEM</span><span class="tag">EDR</span><span class="tag">Cybersecurity Fundamentals</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__head"><span class="skill-card__code">NET</span><h3>Networking</h3></div>
+      <div class="tag-list">
+        <span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">DHCP</span><span class="tag">LAN/WAN</span>
+        <span class="tag">Routing &amp; Switching</span><span class="tag">IP Addressing &amp; Subnetting</span><span class="tag">Network Troubleshooting</span>
+        <span class="tag">Network Monitoring</span><span class="tag">Wi‑Fi Troubleshooting</span><span class="tag">Enterprise Network Infrastructure</span>
+        <span class="tag">Switch &amp; Router Configuration</span><span class="tag">Uplink Management</span><span class="tag">Rack Setup &amp; Cabling</span>
+        <span class="tag">RF Connectivity</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__head"><span class="skill-card__code">FW</span><h3>Firewalls &amp; Security Tools</h3></div>
+      <div class="tag-list">
+        <span class="tag">Check Point Firewall</span><span class="tag">Palo Alto Firewall</span><span class="tag">Fortinet</span>
+        <span class="tag">Wazuh SIEM</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Netcat</span>
+        <span class="tag">Metasploit</span><span class="tag">Kali Linux</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__head"><span class="skill-card__code">DEV</span><h3>Programming &amp; Software</h3></div>
+      <div class="tag-list">
+        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">SQL</span>
+        <span class="tag">Core Java</span><span class="tag">JDBC</span><span class="tag">Spring Boot — Basics</span><span class="tag">REST APIs — Basics</span>
+        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Git</span><span class="tag">GitHub</span>
+        <span class="tag">MySQL</span><span class="tag">SQLite</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__head"><span class="skill-card__code">CS</span><h3>Computer Science</h3></div>
+      <div class="tag-list">
+        <span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Object‑Oriented Programming</span>
+        <span class="tag">DBMS</span><span class="tag">Operating Systems</span><span class="tag">Computer Networks</span>
+        <span class="tag">SDLC</span><span class="tag">Agile Methodology</span><span class="tag">Debugging</span>
+        <span class="tag">Production Support</span><span class="tag">Automation Scripting</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__head"><span class="skill-card__code">CCTV</span><h3>CCTV &amp; Infrastructure</h3></div>
+      <div class="tag-list">
+        <span class="tag">CCTV Installation</span><span class="tag">IP Camera Configuration</span><span class="tag">DVR/NVR Configuration</span>
+        <span class="tag">CCTV Troubleshooting</span><span class="tag">Camera Networking</span><span class="tag">Remote CCTV Monitoring</span>
+        <span class="tag">Storage/HDD Troubleshooting</span><span class="tag">Camera Connectivity</span><span class="tag">Surveillance System Maintenance</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__head"><span class="skill-card__code">OPS</span><h3>Professional Skills</h3></div>
+      <div class="tag-list">
+        <span class="tag">Production Support</span><span class="tag">Technical Troubleshooting</span><span class="tag">Incident Management</span>
+        <span class="tag">Client/Customer Support</span><span class="tag">Cross‑functional Collaboration</span><span class="tag">Problem Solving</span>
+        <span class="tag">Technical Documentation</span><span class="tag">Infrastructure Deployment</span><span class="tag">System Monitoring</span>
+        <span class="tag">Process Automation</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__head"><span class="skill-card__code">TLS</span><h3>Tools</h3></div>
+      <div class="tag-list">
+        <span class="tag">Git / GitHub</span><span class="tag">IntelliJ IDEA</span><span class="tag">Eclipse</span><span class="tag">VS Code</span>
+        <span class="tag">Android Studio</span><span class="tag">Postman</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Kali Linux</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience">
+  <div class="section__head">
+    <span class="section__tag">03</span>
+    <h2 class="section__title">Experience</h2>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card__head">
+      <div>
+        <h3>Network Security Engineer</h3>
+        <p class="exp-card__org">LivingShine IT Infrastructure Pvt. Ltd.</p>
+      </div>
+      <span class="exp-card__status">
+        <span class="statusbar__dot statusbar__dot--sm" aria-hidden="true"></span>ACTIVE
+      </span>
+    </div>
+    <ul class="exp-card__list">
+      <li>Deploy and maintain enterprise network infrastructure end to end, from rack setup and cabling to uplink management.</li>
+      <li>Administer and tune Check Point, Palo Alto, and Fortinet firewalls, including regular firewall rule reviews.</li>
+      <li>Provide L2 SOC support — incident triage, log analysis, and SIEM monitoring across the environment.</li>
+      <li>Write Python automation scripts to reduce repetitive troubleshooting and manual checks.</li>
+      <li>Diagnose and resolve network issues across LAN/WAN, Wi‑Fi, and enterprise switching/routing.</li>
+      <li>Support CCTV and surveillance infrastructure — IP camera configuration, DVR/NVR setup, and remote monitoring.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section section--panel" id="projects">
+  <div class="section__head">
+    <span class="section__tag">04</span>
+    <h2 class="section__title">Projects</h2>
+  </div>
+  <p class="section__note">Placeholder entries below — swap in your own repos, write‑ups, or case studies.</p>
+
+  <div class="project-grid">
+    <a href="#" class="project-card">
+      <div class="project-card__top">
+        <span class="project-card__tag">python · automation</span>
+      </div>
+      <h3>Firewall Rule Audit Script</h3>
+      <p>A Python tool that flags unused, shadowed, or overly permissive firewall rules across a rulebase export.</p>
+      <span class="project-card__link">View on GitHub →</span>
+    </a>
+
+    <a href="#" class="project-card">
+      <div class="project-card__top">
+        <span class="project-card__tag">soc · documentation</span>
+      </div>
+      <h3>Incident Response Playbook</h3>
+      <p>A documented triage-to-resolution playbook for common SOC alerts, built from real incident patterns.</p>
+      <span class="project-card__link">View on GitHub →</span>
+    </a>
+
+    <a href="#" class="project-card">
+      <div class="project-card__top">
+        <span class="project-card__tag">homelab · siem</span>
+      </div>
+      <h3>Home Lab SIEM Deployment</h3>
+      <p>A self-hosted Wazuh SIEM lab ingesting logs from a small virtual network for detection-rule practice.</p>
+      <span class="project-card__link">View on GitHub →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="section" id="certs">
+  <div class="section__head">
+    <span class="section__tag">05</span>
+    <h2 class="section__title">Certifications</h2>
+  </div>
+  <p class="section__note">Add your certifications here — placeholders shown below.</p>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <img src="./CEHv13.png" alt="Certified Ethical Hacker certificate" class="cert-card__image">
+      <p>Certified Ethical Hacker (CEH) — EC-Council, 2024</p>
+    </div>
+    <div class="cert-card">
+      <img src="./cybersec carrerx1.png" alt="CyberSec CareerX certificate" class="cert-card__image">
+      <p>CyberSec CareerX — Cybersecurity Training, 2024</p>
+    </div>
+    <div class="cert-card">
+      <img src="./ficklem.jpeg" alt="Ficklem Licensed Penetration Tester certificate" class="cert-card__image">
+      <p>Ficklem Licensed Penetration Tester certificate &amp; License — 2024</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section--contact" id="contact">
+  <div class="section__head">
+    <span class="section__tag">06</span>
+    <h2 class="section__title">Contact</h2>
+  </div>
+
+  <div class="contact__grid">
+    <p class="contact__lead">
+      Open to network security, SOC, and infrastructure roles. The fastest way to reach me is email.
+    </p>
+    <div class="contact__links">
+      <a href="mailto:deerajreddy2003@gmail.com" class="contact__link">
+        <span class="contact__link-label">Email</span>
+        <span class="contact__link-value">deerajreddy2003@gmail.com</span>
+      </a>
+      <a href="https://github.com/DeerajreddyPannala" class="contact__link" target="_blank" rel="noopener">
+        <span class="contact__link-label">GitHub</span>
+        <span class="contact__link-value">github.com/DeerajreddyPannala</span>
+      </a>
+      <a href="https://www.linkedin.com/in/deeraj-reddy-793b9726b/" class="contact__link" target="_blank" rel="noopener">
+        <span class="contact__link-label">LinkedIn</span>
+        <span class="contact__link-value">linkedin.com/in/deeraj-reddy-793b9726b</span>
+      </a>
+    </div>
+    <div class="contact__cta">
+      <button id="openQueryBtn" class="btn btn--primary">Send a query</button>
+    </div>
+    <p class="contact__note">Your query will open in your email app. If no mail app opens, send your message manually to <a href="mailto:deerajreddy2003@gmail.com">deerajreddy2003@gmail.com</a>.</p>
+  </div>
+</section>
+
+<div class="modal-overlay hidden" id="queryModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="queryModalTitle">
+    <button class="modal__close" id="closeQueryBtn" aria-label="Close query form">×</button>
+    <h3 id="queryModalTitle">Send a query</h3>
+    <p class="modal__note">Ask any question or enquiry and I will receive it via email. A mail app must be configured in your browser or operating system.</p>
+    <form id="queryForm" class="modal__form">
+      <label class="modal__label">Name
+        <input type="text" name="name" required>
+      </label>
+      <label class="modal__label">Email
+        <input type="email" name="email" required>
+      </label>
+      <label class="modal__label">Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="btn btn--primary">Send message</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Deerajreddy Pannala</span>
+  <span class="footer__sep">·</span>
+  <span>Built for GitHub Pages</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
