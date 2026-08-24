@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -27,9 +27,10 @@
     <a href="#about">[ABOUT]</a>
     <a href="#skills">[SKILLS]</a>
     <a href="#experience">[EXPERIENCE]</a>
+    <a href="#leadership">[LEADERSHIP]</a>
     <a href="#projects">[PROJECTS]</a>
     <a href="#certs">[CERTS]</a>
-    <a href="#contact">[CONTACTddddd]</a>
+    <a href="#contact">[CONTACT]</a>
   </nav>
   <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -124,7 +125,7 @@
 </section>
 
 <!-- ============ SKILLS ============ -->
-<section class="section section--panel" id="skills">
+<section class="section section--panel skill-section" id="skills">
   <div class="section__head">
     <span class="section__tag">02</span>
     <h2 class="section__title">Skills</h2>
@@ -239,50 +240,90 @@
       <li>Support CCTV and surveillance infrastructure — IP camera configuration, DVR/NVR setup, and remote monitoring.</li>
     </ul>
   </div>
+
+  <div class="exp-card">
+    <div class="exp-card__head">
+      <div>
+        <h3>SOC Analyst Intern</h3>
+        <p class="exp-card__org">CareerX, Hyderabad (Remote)</p>
+      </div>
+      <span class="exp-card__status">
+        <span class="statusbar__dot statusbar__dot--sm" aria-hidden="true"></span>MAR 2024 – AUG 2024
+      </span>
+    </div>
+    <ul class="exp-card__list">
+      <li>Performed real-time security monitoring using SIEM platforms to identify anomalies and correlate security events.</li>
+      <li>Assisted in configuring and managing Check Point firewall policies to strengthen network security controls.</li>
+      <li>Conducted firewall rule analysis, access review, and documented security change requirements.</li>
+      <li>Supported incident investigation activities involving threat intelligence, log analysis, and network security alerts.</li>
+      <li>Automated parts of security monitoring and incident-response workflows using Python to improve operational efficiency.</li>
+      <li>Worked with security logs and alerts to assist in identifying suspicious activities and potential threats.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ LEADERSHIP ============ -->
+<section class="section section--panel" id="leadership">
+  <div class="section__head">
+    <span class="section__tag">04</span>
+    <h2 class="section__title">Other Leadership Qualities</h2>
+  </div>
+
+  <article class="leadership-card">
+    <a href="https://www.linkedin.com/company/cyberhawks-club-gnit-hyd/" class="leadership-card__logo" target="_blank" rel="noopener" aria-label="Visit CyberHawks Club on LinkedIn">
+      <img src="./cyberhawk.png.jpg" alt="CyberHawks Club logo" class="leadership-card__image" onerror="this.hidden = true; this.parentElement.classList.add('logo-missing');">
+    </a>
+    <div class="leadership-card__body">
+      <p class="leadership-card__eyebrow">CyberHawks Club · GNIT Hyderabad</p>
+      <h3>Technical Lead &amp; PR Manager</h3>
+      <p>Led the club's technical activities, supported members with hands-on cybersecurity learning, managed member relationships, and helped coordinate practical projects, workshops, and knowledge-sharing sessions.</p>
+      <a href="https://www.linkedin.com/company/cyberhawks-club-gnit-hyd/" class="project-card__link" target="_blank" rel="noopener">View club LinkedIn →</a>
+    </div>
+  </article>
 </section>
 
 <!-- ============ PROJECTS ============ -->
 <section class="section section--panel" id="projects">
   <div class="section__head">
-    <span class="section__tag">04</span>
+    <span class="section__tag">05</span>
     <h2 class="section__title">Projects</h2>
   </div>
   <p class="section__note">Placeholder entries below — swap in your own repos, write‑ups, or case studies.</p>
 
   <div class="project-grid">
-    <a href="#" class="project-card">
+    <article class="project-card">
       <div class="project-card__top">
-        <span class="project-card__tag">python · automation</span>
+        <span class="project-card__tag">enterprise networking</span>
       </div>
-      <h3>Firewall Rule Audit Script</h3>
-      <p>A Python tool that flags unused, shadowed, or overly permissive firewall rules across a rulebase export.</p>
-      <span class="project-card__link">View on GitHub →</span>
-    </a>
+      <h3>Hospital Networking Project</h3>
+      <p>Worked on enterprise network infrastructure deployment and support for a hospital environment, including switch configuration, uplink connectivity, device setup, and troubleshooting across departments.</p>
+      <span class="project-card__link">Technologies: Enterprise Networking, LAN, Switching, Uplinks, Network Troubleshooting</span>
+    </article>
 
-    <a href="#" class="project-card">
+    <article class="project-card">
       <div class="project-card__top">
-        <span class="project-card__tag">soc · documentation</span>
+        <span class="project-card__tag">rf connectivity</span>
       </div>
-      <h3>Incident Response Playbook</h3>
-      <p>A documented triage-to-resolution playbook for common SOC alerts, built from real incident patterns.</p>
-      <span class="project-card__link">View on GitHub →</span>
-    </a>
+      <h3>RF Connectivity Between Buildings</h3>
+      <p>Assisted in establishing RF-based wireless connectivity between two separate buildings by installing, configuring, aligning, and validating RF links for stable long-range communication.</p>
+      <span class="project-card__link">Technologies: RF Networking, Point-to-Point Wireless, Wireless Connectivity, Network Troubleshooting, Link Testing</span>
+    </article>
 
-    <a href="#" class="project-card">
+    <article class="project-card">
       <div class="project-card__top">
-        <span class="project-card__tag">homelab · siem</span>
+        <span class="project-card__tag">vapt · security</span>
       </div>
-      <h3>Home Lab SIEM Deployment</h3>
-      <p>A self-hosted Wazuh SIEM lab ingesting logs from a small virtual network for detection-rule practice.</p>
-      <span class="project-card__link">View on GitHub →</span>
-    </a>
+      <h3>Vulnerability Assessment & Penetration Testing</h3>
+      <p>Performed VAPT in a real enterprise environment, including reconnaissance, network scanning, service enumeration, vulnerability analysis, and reporting with remediation guidance.</p>
+      <span class="project-card__link">Technologies: Nmap, Wireshark, Metasploit, Kali Linux, Network Security, VAPT</span>
+    </article>
   </div>
 </section>
 
 <!-- ============ CERTIFICATIONS ============ -->
 <section class="section" id="certs">
   <div class="section__head">
-    <span class="section__tag">05</span>
+    <span class="section__tag">06</span>
     <h2 class="section__title">Certifications</h2>
   </div>
   <p class="section__note">Add your certifications here — placeholders shown below.</p>
@@ -306,7 +347,7 @@
 <!-- ============ CONTACT ============ -->
 <section class="section section--contact" id="contact">
   <div class="section__head">
-    <span class="section__tag">06</span>
+    <span class="section__tag">07</span>
     <h2 class="section__title">Contact</h2>
   </div>
 
