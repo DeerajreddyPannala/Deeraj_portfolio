@@ -70,6 +70,45 @@ if (ticker) {
   }
 }
 
+// ---- Cursor bubble for the Skills section ----
+const skillsSection = document.getElementById('skills');
+const skillCards = skillsSection?.querySelectorAll('.skill-card');
+const skillTags = skillsSection?.querySelectorAll('.tag');
+
+function updateNearestSkill(targets, pointerX, pointerY, threshold) {
+  let nearest = null;
+  let nearestDistance = threshold;
+
+  targets?.forEach(target => {
+    const bounds = target.getBoundingClientRect();
+    const closestX = Math.max(bounds.left, Math.min(pointerX, bounds.right));
+    const closestY = Math.max(bounds.top, Math.min(pointerY, bounds.bottom));
+    const distance = Math.hypot(pointerX - closestX, pointerY - closestY);
+
+    if (distance < nearestDistance) {
+      nearest = target;
+      nearestDistance = distance;
+    }
+  });
+
+  targets?.forEach(target => target.classList.toggle('is-pointer-near', target === nearest));
+}
+
+skillsSection?.addEventListener('pointermove', event => {
+  const bounds = skillsSection.getBoundingClientRect();
+  skillsSection.style.setProperty('--mouse-x', `${event.clientX - bounds.left}px`);
+  skillsSection.style.setProperty('--mouse-y', `${event.clientY - bounds.top}px`);
+  skillsSection.classList.add('is-pointer-active');
+  updateNearestSkill(skillCards, event.clientX, event.clientY, 150);
+  updateNearestSkill(skillTags, event.clientX, event.clientY, 54);
+});
+
+skillsSection?.addEventListener('pointerleave', () => {
+  skillsSection.classList.remove('is-pointer-active');
+  skillCards?.forEach(card => card.classList.remove('is-pointer-near'));
+  skillTags?.forEach(tag => tag.classList.remove('is-pointer-near'));
+});
+
 // ---- Footer year ----
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
