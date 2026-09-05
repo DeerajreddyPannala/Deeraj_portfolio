@@ -2,6 +2,14 @@
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
+// ---- Tab title on visibility change ----
+const originalTitle = document.title;
+const awayTitle = '👀 Thanks for stopping by';
+
+document.addEventListener('visibilitychange', () => {
+  document.title = document.visibilityState === 'hidden' ? awayTitle : originalTitle;
+});
+
 navToggle?.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('is-open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
