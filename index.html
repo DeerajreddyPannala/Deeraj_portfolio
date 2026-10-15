@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deerajreddy Pannala — Network Security Engineer</title>
+<title>Er.Deerajreddy Pannala — Network Security Engineer</title>
 <meta name="description" content="Portfolio of Deerajreddy Pannala, a Network Security Engineer specializing in SOC operations, firewall administration, and network infrastructure.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,20 +21,24 @@
 </div>
 
 <!-- ============ NAV ============ -->
-<header class="nav">
-  <a href="#top" class="nav__logo">DP<span class="nav__logo-dot">.</span></a>
-  <nav class="nav__links" id="navLinks">
-    <a href="#about">[ABOUT]</a>
-    <a href="#skills">[SKILLS]</a>
-    <a href="#experience">[EXPERIENCE]</a>
-    <a href="#leadership">[LEADERSHIP]</a>
-    <a href="#projects">[PROJECTS]</a>
-    <a href="#assistance">[ASSISTANCE]</a>
-    <a href="#certs">[CERTS]</a>
-    <a href="#contact">[CONTACT]</a>
+<header class="nav" id="mainNav">
+  <a href="#top" class="nav__logo" aria-label="Go to top">
+    <span class="nav__logo-mark">DP</span><span class="nav__logo-dot">.</span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
+    <a href="#about" class="nav__link">About</a>
+    <a href="#skills" class="nav__link">Skills</a>
+    <a href="#experience" class="nav__link">Experience</a>
+    <a href="#leadership" class="nav__link">Leadership</a>
+    <a href="#projects" class="nav__link">Projects</a>
+    <a href="#assistance" class="nav__link">Assistance</a>
+    <a href="#certs" class="nav__link">Certs</a>
+    <a href="#contact" class="nav__link">Contact</a>
   </nav>
-  <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-    <span></span><span></span><span></span>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+    <span class="nav__toggle-bar"></span>
+    <span class="nav__toggle-bar"></span>
+    <span class="nav__toggle-bar"></span>
   </button>
 </header>
 
@@ -43,7 +47,7 @@
   <div class="hero__grid">
     <div class="hero__content">
       <p class="eyebrow">// NETWORK SECURITY ENGINEER</p>
-      <h1 class="hero__title">Deerajreddy Pannala</h1>
+      <h1 class="hero__title">Er. Deerajreddy Pannala</h1>
       <p class="hero__tagline">I secure networks, triage incidents, and keep the perimeter honest — from firewall rule to root cause.</p>
       <div class="hero__badges">
         <span class="hero__badge">SOC Operations</span>
@@ -126,92 +130,199 @@
 </section>
 
 <!-- ============ SKILLS ============ -->
-<section class="section section--panel skill-section" id="skills">
-  <div class="section__head">
-    <span class="section__tag">02</span>
-    <h2 class="section__title">Skills</h2>
-  </div>
+<section class="domains-section" id="skills">
+  <div class="domains-bg-grid" aria-hidden="true"></div>
 
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <div class="skill-card__head"><span class="skill-card__code">SEC</span><h3>Cybersecurity</h3></div>
-      <div class="tag-list">
-        <span class="tag">Network Security</span><span class="tag">SOC Operations</span><span class="tag">Security Monitoring</span>
-        <span class="tag">Incident Triage &amp; Response</span><span class="tag">Log Analysis</span><span class="tag">Threat Detection</span>
-        <span class="tag">Vulnerability Assessment</span><span class="tag">Firewall Administration</span><span class="tag">Firewall Rule Management</span>
-        <span class="tag">Security Auditing</span><span class="tag">Basic VAPT</span><span class="tag">Network Traffic Analysis</span>
-        <span class="tag">SIEM</span><span class="tag">EDR</span><span class="tag">Cybersecurity Fundamentals</span>
-      </div>
+  <div class="domains-inner">
+    <div class="domains-header">
+      <p class="domains-eyebrow">CYBERSECURITY &amp; NETWORK ENGINEERING</p>
+      <h2 class="domains-title">What I Bring to the <span class="domains-title--amber">Table</span></h2>
+      <p class="domains-subtitle">Nine skill areas of cybersecurity, network infrastructure, and security operations backed by hands-on experience.</p>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-card__head"><span class="skill-card__code">NET</span><h3>Networking</h3></div>
-      <div class="tag-list">
-        <span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">DHCP</span><span class="tag">LAN/WAN</span>
-        <span class="tag">Routing &amp; Switching</span><span class="tag">IP Addressing &amp; Subnetting</span><span class="tag">Network Troubleshooting</span>
-        <span class="tag">Network Monitoring</span><span class="tag">Wi‑Fi Troubleshooting</span><span class="tag">Enterprise Network Infrastructure</span>
-        <span class="tag">Switch &amp; Router Configuration</span><span class="tag">Uplink Management</span><span class="tag">Rack Setup &amp; Cabling</span>
-        <span class="tag">RF Connectivity</span>
-      </div>
-    </div>
+    <div class="domains-grid">
 
-    <div class="skill-card">
-      <div class="skill-card__head"><span class="skill-card__code">FW</span><h3>Firewalls &amp; Security Tools</h3></div>
-      <div class="tag-list">
-        <span class="tag">Check Point Firewall</span><span class="tag">Palo Alto Firewall</span><span class="tag">Fortinet</span>
-        <span class="tag">Wazuh SIEM</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Netcat</span>
-        <span class="tag">Metasploit</span><span class="tag">Kali Linux</span>
-      </div>
-    </div>
+      <!-- S01 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 7h.01M11 7h6"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 01</span>
+        </div>
+        <h3 class="domain-card__title">Network Security &amp; Firewall Administration</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">Check Point Quantum Spark</span>
+          <span class="domain-tag">Palo Alto Firewall</span>
+          <span class="domain-tag">Fortinet Firewall</span>
+          <span class="domain-tag">Firewall Policy Management</span>
+          <span class="domain-tag">NAT &amp; Access Control</span>
+          <span class="domain-tag">VPN Troubleshooting</span>
+          <span class="domain-tag">Security Rule Review</span>
+        </div>
+      </article>
 
-    <div class="skill-card">
-      <div class="skill-card__head"><span class="skill-card__code">DEV</span><h3>Programming &amp; Software</h3></div>
-      <div class="tag-list">
-        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">SQL</span>
-        <span class="tag">Core Java</span><span class="tag">JDBC</span><span class="tag">Spring Boot — Basics</span><span class="tag">REST APIs — Basics</span>
-        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Git</span><span class="tag">GitHub</span>
-        <span class="tag">MySQL</span><span class="tag">SQLite</span>
-      </div>
-    </div>
+      <!-- S02 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-5 6M12 11l5 6"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 02</span>
+        </div>
+        <h3 class="domain-card__title">Network Infrastructure &amp; Administration</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">TCP/IP &amp; OSI Model</span>
+          <span class="domain-tag">VLANs &amp; Trunking</span>
+          <span class="domain-tag">DHCP &amp; DNS</span>
+          <span class="domain-tag">Routing &amp; Switching</span>
+          <span class="domain-tag">HPE OfficeConnect</span>
+          <span class="domain-tag">Network Troubleshooting</span>
+          <span class="domain-tag">LAN/WAN Connectivity</span>
+        </div>
+      </article>
 
-    <div class="skill-card">
-      <div class="skill-card__head"><span class="skill-card__code">CS</span><h3>Computer Science</h3></div>
-      <div class="tag-list">
-        <span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Object‑Oriented Programming</span>
-        <span class="tag">DBMS</span><span class="tag">Operating Systems</span><span class="tag">Computer Networks</span>
-        <span class="tag">SDLC</span><span class="tag">Agile Methodology</span><span class="tag">Debugging</span>
-        <span class="tag">Production Support</span><span class="tag">Automation Scripting</span>
-      </div>
-    </div>
+      <!-- S03 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 03</span>
+        </div>
+        <h3 class="domain-card__title">Security Operations &amp; Monitoring</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">SOC Fundamentals</span>
+          <span class="domain-tag">Wazuh SIEM</span>
+          <span class="domain-tag">Log Analysis</span>
+          <span class="domain-tag">Security Event Monitoring</span>
+          <span class="domain-tag">Incident Investigation</span>
+          <span class="domain-tag">Alert Triage</span>
+          <span class="domain-tag">Security Reporting</span>
+        </div>
+      </article>
 
-    <div class="skill-card">
-      <div class="skill-card__head"><span class="skill-card__code">CCTV</span><h3>CCTV &amp; Infrastructure</h3></div>
-      <div class="tag-list">
-        <span class="tag">CCTV Installation</span><span class="tag">IP Camera Configuration</span><span class="tag">DVR/NVR Configuration</span>
-        <span class="tag">CCTV Troubleshooting</span><span class="tag">Camera Networking</span><span class="tag">Remote CCTV Monitoring</span>
-        <span class="tag">Storage/HDD Troubleshooting</span><span class="tag">Camera Connectivity</span><span class="tag">Surveillance System Maintenance</span>
-      </div>
-    </div>
+      <!-- S04 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 04</span>
+        </div>
+        <h3 class="domain-card__title">Vulnerability Assessment &amp; Penetration Testing</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">Kali Linux</span>
+          <span class="domain-tag">Nmap</span>
+          <span class="domain-tag">Metasploit</span>
+          <span class="domain-tag">Wireshark</span>
+          <span class="domain-tag">Netcat</span>
+          <span class="domain-tag">Port Scanning</span>
+          <span class="domain-tag">Vulnerability Assessment</span>
+        </div>
+      </article>
 
-    <div class="skill-card">
-      <div class="skill-card__head"><span class="skill-card__code">OPS</span><h3>Professional Skills</h3></div>
-      <div class="tag-list">
-        <span class="tag">Production Support</span><span class="tag">Technical Troubleshooting</span><span class="tag">Incident Management</span>
-        <span class="tag">Client/Customer Support</span><span class="tag">Cross‑functional Collaboration</span><span class="tag">Problem Solving</span>
-        <span class="tag">Technical Documentation</span><span class="tag">Infrastructure Deployment</span><span class="tag">System Monitoring</span>
-        <span class="tag">Process Automation</span>
-      </div>
-    </div>
+      <!-- S05 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 05</span>
+        </div>
+        <h3 class="domain-card__title">Network Troubleshooting &amp; Performance</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">Packet Loss Analysis</span>
+          <span class="domain-tag">Ping &amp; Traceroute</span>
+          <span class="domain-tag">WinMTR</span>
+          <span class="domain-tag">DNS Diagnostics</span>
+          <span class="domain-tag">TCP Connectivity Testing</span>
+          <span class="domain-tag">Wi-Fi Roaming Analysis</span>
+          <span class="domain-tag">Root Cause Analysis</span>
+        </div>
+      </article>
 
-    <div class="skill-card">
-      <div class="skill-card__head"><span class="skill-card__code">TLS</span><h3>Tools</h3></div>
-      <div class="tag-list">
-        <span class="tag">Git / GitHub</span><span class="tag">IntelliJ IDEA</span><span class="tag">Eclipse</span><span class="tag">VS Code</span>
-        <span class="tag">Android Studio</span><span class="tag">Postman</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Kali Linux</span>
-      </div>
-    </div>
+      <!-- S06 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 06</span>
+        </div>
+        <h3 class="domain-card__title">Wireless Networking &amp; Access Points</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">UniFi Access Points</span>
+          <span class="domain-tag">Wi-Fi Troubleshooting</span>
+          <span class="domain-tag">RF Fundamentals</span>
+          <span class="domain-tag">RSSI &amp; SNR Analysis</span>
+          <span class="domain-tag">Channel Utilization</span>
+          <span class="domain-tag">Client Roaming</span>
+          <span class="domain-tag">VLAN Configuration</span>
+        </div>
+      </article>
 
+      <!-- S07 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 07</span>
+        </div>
+        <h3 class="domain-card__title">IT Infrastructure &amp; Endpoint Support</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">Windows Administration</span>
+          <span class="domain-tag">Active Directory Fundamentals</span>
+          <span class="domain-tag">DNS &amp; DHCP Support</span>
+          <span class="domain-tag">VPN Client Support</span>
+          <span class="domain-tag">Printer Troubleshooting</span>
+          <span class="domain-tag">Endpoint Connectivity</span>
+          <span class="domain-tag">Hardware &amp; Software Diagnostics</span>
+        </div>
+      </article>
+
+      <!-- S08 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 08</span>
+        </div>
+        <h3 class="domain-card__title">CCTV, PoE &amp; Physical Security Infrastructure</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">IP CCTV Systems</span>
+          <span class="domain-tag">PoE Switches</span>
+          <span class="domain-tag">Cat6 Cabling</span>
+          <span class="domain-tag">Patch Panels &amp; I/O Modules</span>
+          <span class="domain-tag">Rack Planning</span>
+          <span class="domain-tag">Fiber Uplinks &amp; SFP Modules</span>
+          <span class="domain-tag">Camera Network Design</span>
+        </div>
+      </article>
+
+      <!-- S09 -->
+      <article class="domain-card" data-animate>
+        <div class="domain-card__top">
+          <div class="domain-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <span class="domain-card__num">SKILL 09</span>
+        </div>
+        <h3 class="domain-card__title">Automation, Scripting &amp; Security Documentation</h3>
+        <div class="domain-tag-list">
+          <span class="domain-tag">Python</span>
+          <span class="domain-tag">Bash Fundamentals</span>
+          <span class="domain-tag">Network Diagnostic Scripts</span>
+          <span class="domain-tag">Technical Documentation</span>
+          <span class="domain-tag">Incident Reports</span>
+          <span class="domain-tag">Network Diagrams</span>
+          <span class="domain-tag">Troubleshooting Reports</span>
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
