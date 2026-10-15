@@ -78,44 +78,20 @@ if (ticker) {
   }
 }
 
-// ---- Cursor bubble for the Skills section ----
-const skillsSection = document.getElementById('skills');
-const skillCards = skillsSection?.querySelectorAll('.skill-card');
-const skillTags = skillsSection?.querySelectorAll('.tag');
-
-function updateNearestSkill(targets, pointerX, pointerY, threshold) {
-  let nearest = null;
-  let nearestDistance = threshold;
-
-  targets?.forEach(target => {
-    const bounds = target.getBoundingClientRect();
-    const closestX = Math.max(bounds.left, Math.min(pointerX, bounds.right));
-    const closestY = Math.max(bounds.top, Math.min(pointerY, bounds.bottom));
-    const distance = Math.hypot(pointerX - closestX, pointerY - closestY);
-
-    if (distance < nearestDistance) {
-      nearest = target;
-      nearestDistance = distance;
-    }
-  });
-
-  targets?.forEach(target => target.classList.toggle('is-pointer-near', target === nearest));
+// ---- Domain cards entrance animation ----
+const domainCards = document.querySelectorAll('.domain-card[data-animate]');
+if (domainCards.length) {
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        const idx = Array.from(domainCards).indexOf(entry.target);
+        setTimeout(() => entry.target.classList.add('is-visible'), idx * 60);
+        cardObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  domainCards.forEach(card => cardObserver.observe(card));
 }
-
-skillsSection?.addEventListener('pointermove', event => {
-  const bounds = skillsSection.getBoundingClientRect();
-  skillsSection.style.setProperty('--mouse-x', `${event.clientX - bounds.left}px`);
-  skillsSection.style.setProperty('--mouse-y', `${event.clientY - bounds.top}px`);
-  skillsSection.classList.add('is-pointer-active');
-  updateNearestSkill(skillCards, event.clientX, event.clientY, 150);
-  updateNearestSkill(skillTags, event.clientX, event.clientY, 54);
-});
-
-skillsSection?.addEventListener('pointerleave', () => {
-  skillsSection.classList.remove('is-pointer-active');
-  skillCards?.forEach(card => card.classList.remove('is-pointer-near'));
-  skillTags?.forEach(tag => tag.classList.remove('is-pointer-near'));
-});
 
 // ---- Footer year ----
 const yearEl = document.getElementById('year');
@@ -123,14 +99,16 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ---- Active nav link on scroll ----
 const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav__links a');
+const navAnchors = document.querySelectorAll('.nav__link');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const id = entry.target.getAttribute('id');
       navAnchors.forEach(a => {
-        a.style.color = a.getAttribute('href') === `#${id}` ? 'var(--accent-teal)' : '';
+        const isActive = a.getAttribute('href') === `#${id}`;
+        a.classList.toggle('is-active', isActive);
+        a.style.color = '';
       });
     }
   });
